@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<canvas id="myCanvas" width="500" height="500"
+style="border:10px solid #000000;">
+    
+</canvas>
+<br>
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+// Create gradient
+var grd = ctx.createLinearGradient(0,0,500,500);
+grd.addColorStop(0,"red");
+grd.addColorStop(1,"white");
+// Fill with gradient
+ctx.fillStyle = grd;
+ctx.fillRect(0,0,500,500);
+</script>
+
+<script>
+var h = 100;
+var w = 50;                 
+
+
+//letterOne();
+function letterOne(h, w, color) {
+    var ctx = myCanvas.getContext("2d");
+    ctx.beginPath();
+    ctx.moveTo(125,160);
+    ctx.lineTo(80,160);
+    ctx.lineTo(80,300);
+    ctx.lineTo(170,300);
+    ctx.lineTo(170,280);
+    ctx.lineTo(100,280);
+    ctx.lineTo(100,180);
+    ctx.lineTo(170,180);
+    ctx.lineTo(170,160);
+    ctx.closePath();
+    ctx.strokeStyle="blue";
+    ctx.stroke();
+}
+
+//letterTwo();
+function letterTwo(h, w, color) {
+    var ctx = myCanvas.getContext("2d");
+    ctx.beginPath();
+    ctx.moveTo(250,160);
+    ctx.lineTo(195,160);
+    ctx.lineTo(195,180);
+    ctx.lineTo(230,180);
+    ctx.lineTo(230,300);
+    ctx.lineTo(250,300);
+    ctx.lineTo(250,180);
+    ctx.lineTo(285,180);
+    ctx.lineTo(285,160);
+    ctx.closePath();
+    ctx.strokeStyle="green";
+    ctx.stroke();
+}
+
+//letterThree();
+function letterThree(h, w, color) {
+    var ctx = myCanvas.getContext("2d");
+    ctx.beginPath();
+    ctx.moveTo(375,160);
+    ctx.lineTo(320,160);
+    ctx.lineTo(320,180);
+    ctx.lineTo(355,180);
+    ctx.lineTo(355,280);
+    ctx.lineTo(320,280);
+    ctx.lineTo(320,300);
+    ctx.lineTo(410,300);
+    ctx.lineTo(410,280);
+    ctx.lineTo(375,280);
+    ctx.lineTo(375,180);
+    ctx.lineTo(410,180);
+    ctx.lineTo(410,160);
+    ctx.closePath();
+    ctx.strokeStyle="yellow";
+    ctx.stroke();
+}
+</script>
+
+
+<button type="button" onclick="letterOne()">View Letter 1</button>
+<button type="button" onclick="letterTwo()">View Letter 2</button>
+<button type="button" onclick="letterThree()">View Letter 3</button>
+
+
+
+<script>
+//I think this isn't exactly what you were looking for, but I am still working on html / javascript basics,
+//in this program I couldn't figure out how to 
+//structure my program- like a C program, with function definitions and then main? Even so, when I was playing with a main function, 
+//I couldn't figure out how to pass my parameters into the functions themselves. Still lots of syntax to learn!
+</script>
+
+
+</body>
+</html> 
+
+
